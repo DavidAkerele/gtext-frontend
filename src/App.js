@@ -9,7 +9,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/products')
+    axios.get('https://gtext-backend.vercel.app/products')
       .then(response => setProducts(response.data))
       .catch(error => console.error('Error fetching products:', error));
   }, []);
@@ -53,7 +53,7 @@ const App = () => {
                     </div>
                   ))
                 ) : (
-                  <p>No products found.</p>
+                  <p>No products found....</p>
                 )}
               </div>
             }
