@@ -7,7 +7,7 @@ const ProductDetails = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    axios.get(`https://gtext-backend.vercel.app/products/${id}`)
+    axios.get(`http://localhost:5000/product/${id}`)
       .then(response => setProduct(response.data))
       .catch(error => console.error('Error fetching product details:', error));
   }, [id]);

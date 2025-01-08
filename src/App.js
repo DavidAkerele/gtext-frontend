@@ -10,6 +10,7 @@ const App = () => {
 
   useEffect(() => {
     axios.get('https://gtext-backend.vercel.app/products')
+    // axios.get('http://localhost:5000/products')
       .then(response => setProducts(response.data))
       .catch(error => console.error('Error fetching products:', error));
   }, []);
